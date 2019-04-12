@@ -1,15 +1,15 @@
 /* variable declarations */
 :root {
-    --myapp-color-background: limegreen;
-    --myapp-color-header: rgb(60,60,60);
-    --myapp-color-main: rgb(45,45,45);
-    --myapp-color-footer: rgb(15,15,15);
-    --myapp-height-header: 60px;
-    --myapp-height-footer: 50px;
+    --my-color-background: limegreen;
+    --my-color-header: rgb(60,60,60);
+    --my-color-main: rgb(45,45,45);
+    --my-color-footer: rgb(15,15,15);
+    --my-height-header: 60px;
+    --my-height-footer: 50px;
 }
 
 html, body {
-    background-color: var(--myapp-color-background);
+    background-color: var(--my-color-background);
     margin: 0px;
     font-family: "Avenir Medium", sans-serif;
     color: white;
@@ -30,16 +30,16 @@ html, body {
 
 /* base structure */
 header {
-    background-color: var(--myapp-color-header);
-    height: var(--myapp-height-header);
+    background-color: var(--my-color-header);
+    height: var(--my-height-header);
 }
 
 main {
-    background-color: var(--myapp-color-main);
-    height: calc(100% - (var(--myapp-height-header) + var(--myapp-height-footer)));
+    background-color: var(--my-color-main);
+    height: calc(100% - (var(--my-height-header) + var(--my-height-footer)));
 }
 
 footer {
-    background-color: var(--myapp-color-footer);
-    height: var(--myapp-height-footer);
+    background-color: var(--my-color-footer);
+    height: var(--my-height-footer);
 }
