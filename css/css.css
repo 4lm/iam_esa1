@@ -57,3 +57,18 @@ p {
 main {
     overflow-y: auto;
 }
+
+
+/* heading */
+h1 {
+    font-size: 20pt;
+    margin: var(--my-margin);
+    font-weight: normal;
+    line-height: var(--my-height-header);
+    text-transform: uppercase;
+}
+
+header {
+    padding-right: var(--my-padding);
+    padding-left:  var(--my-padding);
+}
