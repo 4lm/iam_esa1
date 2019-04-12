@@ -4,7 +4,8 @@
   "description": "",
   "main": "htm.html",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "lite-server"
   },
   "repository": {
     "type": "git",
@@ -17,6 +18,6 @@
   },
   "homepage": "https://github.com/4lm/org.dieschnittstelle.iam.css_jsl_jsr#readme",
   "devDependencies": {
-    "browser-sync": "^2.26.3"
+    "lite-server": "^2.4.0"
   }
 }
