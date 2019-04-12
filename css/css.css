@@ -25,6 +25,7 @@ html, body {
     user-select: none;
     -moz-user-select: none;
     -webkit-user-select: none;
+    box-sizing: border-box;
 }
 
 
@@ -42,4 +43,15 @@ main {
 footer {
     background-color: var(--my-color-footer);
     height: var(--my-height-footer);
+}
+
+
+/* main scrolling */
+p {
+    margin: 0px;
+    padding: 10px;
+}
+
+main {
+    overflow-y: auto;
 }
