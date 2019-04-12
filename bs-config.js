@@ -1,5 +1,5 @@
 module.exports = {
     "port": 3000,
     "startPath": "htm.html",
-    "browser": "chrome"
+    "browser": "google-chrome"
 };
