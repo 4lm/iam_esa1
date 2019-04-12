@@ -6,11 +6,13 @@
     --my-color-footer: rgb(15,15,15);
     --my-height-header: 60px;
     --my-height-footer: 50px;
+    --my-padding: 10px;
+    --my-margin: 0px;
 }
 
 html, body {
     background-color: var(--my-color-background);
-    margin: 0px;
+    margin: var(--my-margin);
     font-family: "Avenir Medium", sans-serif;
     color: white;
     width: 100%;
@@ -48,8 +50,8 @@ footer {
 
 /* main scrolling */
 p {
-    margin: 0px;
-    padding: 10px;
+    margin: var(--my-margin);
+    padding: var(--my-padding);
 }
 
 main {
