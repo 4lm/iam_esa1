@@ -11,6 +11,8 @@
     --my-spacing-b: 10px;
     --my-size-imgbutton: 40px;
     --my-size-imgbutton-img: 28px;
+    --my-height-list-item: 60px;
+    --my-color-lines: rgb(120,120,120);
 }
 
 html, body {
@@ -131,4 +133,13 @@ main ul {
     list-style: none;
     padding: 0px;
     margin: 0px;
+}
+
+main li {
+    height: var(--my-height-list-item);
+    line-height: var(--my-height-list-item);
+    border-bottom: 1px solid var(--my-color-lines);
+    padding-left: 15px;
+    padding-right: 15px;
+    font-size: 20pt;
 }
