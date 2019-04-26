@@ -125,3 +125,10 @@ footer .imgbutton {
 #refresh-button {
     background-image: url('./img/glyphicons/png/glyphicons-82-refresh.png');
 }
+
+/* list view */
+main ul {
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+}
