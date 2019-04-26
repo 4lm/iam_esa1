@@ -193,3 +193,14 @@ main li img {
 .tiles main {
     padding-left: 10px;
 }
+
+/* fade in|out */
+main.faded {
+    opacity: 0;
+    transition: opacity 2s;
+}
+
+main {
+    opacity: 1;
+    transition: opacity 1s;
+}
