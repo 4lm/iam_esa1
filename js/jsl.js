@@ -6,7 +6,7 @@ function initialiseView() {
     const header = document.getElementsByTagName("header")[0];
     const main = document.querySelector("main");
     const refresh = document.querySelector("footer .refresh-button");
-    const ul = main.getElementsByTagName("ul")[0];
+    let ul = main.getElementsByTagName("ul")[0];
     const add = header.querySelector(".add-button");
 
     // Switching views
@@ -50,7 +50,16 @@ function initialiseView() {
     // Add new elements
     add.onclick = (e) => {
         e.stopPropagation();
-        alert("add new element");
+        addLiElementToList({
+            title: "New Element " + Date.now(),
+            src:"https://placeimg.com/150/150"
+        });
+    }
+
+    function addLiElementToList(obj) {
+        console.log("add new element for: " + JSON.stringify(obj));
+
+        ul.innerHTML = ul.innerHTML + "<li><img class=\"align-left\" src=\"" + obj.src + "\"><h2>" + obj.title + "</h2><button class=\"imgbutton align-right edit-button\"></button></li>\""
     }
 }
 
