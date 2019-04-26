@@ -116,16 +116,20 @@ footer .imgbutton {
     float: right;
 }
 
-#menu-button {
+.menu-button {
     background-image: url('./img/glyphicons/png/glyphicons-517-menu-hamburger.png');
 }
 
-#add-button {
+.add-button {
     background-image: url('./img/glyphicons/png/glyphicons-433-plus.png');
 }
 
-#refresh-button {
+.refresh-button {
     background-image: url('./img/glyphicons/png/glyphicons-82-refresh.png');
+}
+
+.edit-button {
+    background-image: url('./img/glyphicons/png/glyphicons-31-pencil.png');
 }
 
 /* list view */
@@ -140,6 +144,10 @@ main li {
     line-height: var(--my-height-list-item);
     border-bottom: 1px solid var(--my-color-lines);
     padding-left: 15px;
-    padding-right: 15px;
+    padding-right: 10px;
     font-size: 20pt;
+}
+
+main li .imgbutton {
+    margin-top: calc((var(--my-height-list-item) - var(--my-size-imgbutton)) / 2);
 }
