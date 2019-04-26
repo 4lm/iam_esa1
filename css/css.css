@@ -14,6 +14,7 @@
     --my-height-list-item: 70px;
     --my-color-lines: rgb(120, 120, 120);
     --my-size-img: 50px;
+    --my-size-img-tiles: 100px;
 }
 
 html, body {
@@ -167,4 +168,28 @@ main li img {
     object-fit: cover;
     margin-top: calc((var(--my-height-list-item) - var(--my-size-img)) / 2);
     margin-right: 10px;
+}
+
+/* tiles */
+
+.tiles li {
+    display: inline-block;
+    border-bottom: none;
+    padding-left: 0px;
+    padding-right: 0px;
+    height: calc(var(--my-size-img-tiles) + 10px);
+}
+
+.tiles li * {
+    display: none;
+}
+
+.tiles li img {
+    display: block;
+    height: var(--my-size-img-tiles);
+    width: var(--my-size-img-tiles);
+}
+
+.tiles main {
+    padding-left: 10px;
 }
