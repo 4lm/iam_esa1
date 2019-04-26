@@ -12,7 +12,8 @@
     --my-size-imgbutton: 40px;
     --my-size-imgbutton-img: 28px;
     --my-height-list-item: 70px;
-    --my-color-lines: rgb(120,120,120);
+    --my-color-lines: rgb(120, 120, 120);
+    --my-size-img: 50px;
 }
 
 html, body {
@@ -133,6 +134,7 @@ footer .imgbutton {
 }
 
 /* list view */
+
 main ul {
     list-style: none;
     padding: 0px;
@@ -150,4 +152,19 @@ main li {
 
 main li .imgbutton {
     margin-top: calc((var(--my-height-list-item) - var(--my-size-imgbutton)) / 2);
+}
+
+main h2 {
+    display: inline-block;
+    font-weight: normal;
+    margin: 0px;
+    font-size: 20pt;
+}
+
+main li img {
+    height: var(--my-size-img);
+    width: var(--my-size-img);
+    object-fit: cover;
+    margin-top: calc((var(--my-height-list-item) - var(--my-size-img)) / 2);
+    margin-right: 10px;
 }
