@@ -12,6 +12,12 @@ function initialiseView() {
 
     refresh.onclick = () => {
         main.classList.toggle("faded");
+        main.addEventListener("transitionend", ontransitionend);
+    }
+
+    function ontransitionend() {
+        main.classList.toggle("faded");
+        main.removeEventListener("transitionend", ontransitionend);
     }
 }
 
