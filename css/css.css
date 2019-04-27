@@ -7,19 +7,20 @@
     --my-color-footer: rgb(255, 255, 255);
     --my-height-header: 60px;
     --my-height-footer: 50px;
-    --my-spacing-a: 0px;
-    --my-spacing-b: 10px;
+    --my-spacing-0: 0px;
+    --my-spacing-6: 6px;
+    --my-spacing-10: 10px;
     --my-size-imgbutton: 40px;
     --my-size-imgbutton-img: 28px;
     --my-height-list-item: 70px;
-    --my-color-lines: rgb(120, 120, 120);
+    --my-color-lines: rgb(205, 205, 205);
     --my-size-img: 50px;
     --my-size-img-tiles: 100px;
 }
 
 html, body {
     background-color: var(--my-color-background);
-    margin: var(--my-spacing-a);
+    margin: var(--my-spacing-0);
     font-family: "Avenir Medium", sans-serif;
     color: rgb(0, 0, 0);
     width: 100%;
@@ -52,15 +53,15 @@ main {
 footer {
     background-color: var(--my-color-footer);
     height: var(--my-height-footer);
-    padding-left: var(--my-spacing-b);
-    padding-right: var(--my-spacing-b);
+    padding-left: var(--my-spacing-10);
+    padding-right: var(--my-spacing-10);
 }
 
 /* main scrolling */
 
 p {
-    margin: var(--my-spacing-a);
-    padding: var(--my-spacing-b);
+    margin: var(--my-spacing-0);
+    padding: var(--my-spacing-10);
 }
 
 main {
@@ -72,20 +73,23 @@ main {
 h1 {
     font-size: 20pt;
     display: inline-block;
-    margin: var(--my-spacing-a);
+    margin: var(--my-spacing-0);
+    padding-left: var(--my-spacing-6);
+    padding-right: var(--my-spacing-6);
     font-weight: normal;
     line-height: var(--my-height-header);
 }
 
 header {
-    padding-right: var(--my-spacing-b);
-    padding-left: var(--my-spacing-b);
+    padding-right: var(--my-spacing-10);
+    padding-left: var(--my-spacing-10);
+    border-bottom: 5px solid var(--my-color-lines);
 }
 
 /* left/right alignment, imgbuttons */
 
 .imgbutton {
-    margin-right: var(--my-spacing-b);
+    margin-right: var(--my-spacing-10);
     border: none;
     background-color: transparent;
     color: transparent;
@@ -105,8 +109,8 @@ footer .imgbutton {
     margin-top: calc((var(--my-height-footer) - var(--my-size-imgbutton)) / 2);
 }
 
-.imgbutton:last-child {
-    margin-right: var(--my-spacing-a);
+.imgbutton.add-button{
+    margin-right: var(--my-spacing-0);
 }
 
 .align-left {
@@ -119,6 +123,10 @@ footer .imgbutton {
 
 .menu-button {
     background-image: url('./img/glyphicons/png/glyphicons-517-menu-hamburger.png');
+}
+
+.tile-button {
+    background-image: url('./img/glyphicons/png/glyphicons-157-show-thumbnails.png');
 }
 
 .add-button {
@@ -194,6 +202,7 @@ main li img {
 }
 
 /* fade in|out */
+
 main.faded {
     opacity: 0;
     transition: opacity 2s;
