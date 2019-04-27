@@ -75,7 +75,6 @@ h1 {
     margin: var(--my-spacing-a);
     font-weight: normal;
     line-height: var(--my-height-header);
-    text-transform: uppercase;
 }
 
 header {
