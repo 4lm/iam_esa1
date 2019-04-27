@@ -2,9 +2,9 @@
 
 :root {
     --my-color-background: limegreen;
-    --my-color-header: rgb(60, 60, 60);
-    --my-color-main: rgb(45, 45, 45);
-    --my-color-footer: rgb(15, 15, 15);
+    --my-color-header: rgb(255, 255, 255);
+    --my-color-main: rgb(255, 255, 255);
+    --my-color-footer: rgb(255, 255, 255);
     --my-height-header: 60px;
     --my-height-footer: 50px;
     --my-spacing-a: 0px;
