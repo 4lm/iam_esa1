@@ -1,8 +1,9 @@
-/* variable declarations */
+/* Variable declarations */
 
 :root {
     --my-color-background: limegreen;
     --my-color-footer: rgb(255, 255, 255);
+    --my-color-footer-border-top: rgb(250, 132, 43);
     --my-color-header: rgb(255, 255, 255);
     --my-color-lines: rgb(205, 205, 205);
     --my-color-main: rgb(255, 255, 255);
@@ -29,7 +30,7 @@ html, body {
     max-height: 100%;
 }
 
-/* block text selection */
+/* Block text selection */
 
 * {
     user-select: none;
@@ -38,7 +39,7 @@ html, body {
     box-sizing: border-box;
 }
 
-/* base structure */
+/* Base structure */
 
 header {
     background-color: var(--my-color-header);
@@ -57,7 +58,7 @@ footer {
     padding-right: var(--my-spacing-10);
 }
 
-/* main scrolling */
+/* Main scrolling */
 
 p {
     margin: var(--my-spacing-0);
@@ -68,7 +69,7 @@ main {
     overflow-y: auto;
 }
 
-/* heading */
+/* Heading */
 
 h1 {
     font-size: 20pt;
@@ -86,7 +87,13 @@ header {
     border-bottom: 5px solid var(--my-color-lines);
 }
 
-/* left/right alignment, imgbuttons */
+/* Footing */
+
+footer {
+    border-top: 4px solid var(--my-color-footer-border-top);
+}
+
+/* Left|right alignment, imgbuttons */
 
 .imgbutton {
     margin-right: var(--my-spacing-10);
@@ -133,6 +140,10 @@ footer .imgbutton {
     background-image: url('./img/glyphicons/png/glyphicons-433-plus.png');
 }
 
+.logout-button {
+    background-image: url('./img/glyphicons/png/glyphicons-388-log-out.png');
+}
+
 .refresh-button {
     background-image: url('./img/glyphicons/png/glyphicons-82-refresh.png');
 }
@@ -141,7 +152,7 @@ footer .imgbutton {
     background-image: url('./img/glyphicons/png/glyphicons-31-pencil.png');
 }
 
-/* list view */
+/* List view */
 
 main ul {
     list-style: none;
@@ -177,7 +188,7 @@ main li img {
     margin-right: 10px;
 }
 
-/* tiles */
+/* Tiles */
 
 .tiles li {
     display: inline-block;
@@ -201,7 +212,7 @@ main li img {
     padding-left: 10px;
 }
 
-/* fade in|out */
+/* Fade in|out */
 
 main.faded {
     opacity: 0;
