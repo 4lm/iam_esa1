@@ -116,10 +116,6 @@ footer .imgbutton {
     margin-top: calc((var(--my-height-footer) - var(--my-size-imgbutton)) / 2);
 }
 
-.imgbutton.add-button{
-    margin-right: var(--my-spacing-0);
-}
-
 .align-left {
     float: left;
 }
@@ -138,6 +134,7 @@ footer .imgbutton {
 
 .add-button {
     background-image: url('./img/glyphicons/png/glyphicons-433-plus.png');
+    margin-right: var(--my-spacing-0);
 }
 
 .logout-button {
@@ -146,6 +143,7 @@ footer .imgbutton {
 
 .refresh-button {
     background-image: url('./img/glyphicons/png/glyphicons-82-refresh.png');
+    margin-right: var(--my-spacing-0);
 }
 
 .edit-button {
@@ -156,8 +154,8 @@ footer .imgbutton {
 
 main ul {
     list-style: none;
-    padding: 0px;
-    margin: 0px;
+    padding: var(--my-spacing-0);
+    margin: var(--my-spacing-0);
 }
 
 main li {
@@ -165,7 +163,7 @@ main li {
     line-height: var(--my-height-list-item);
     border-bottom: 1px solid var(--my-color-lines);
     padding-left: 15px;
-    padding-right: 10px;
+    padding-right: var(--my-spacing-10);
     font-size: 20pt;
 }
 
@@ -176,7 +174,7 @@ main li .imgbutton {
 main h2 {
     display: inline-block;
     font-weight: normal;
-    margin: 0px;
+    margin: var(--my-spacing-0);
     font-size: 20pt;
 }
 
@@ -185,7 +183,7 @@ main li img {
     width: var(--my-size-img);
     object-fit: cover;
     margin-top: calc((var(--my-height-list-item) - var(--my-size-img)) / 2);
-    margin-right: 10px;
+    margin-right: var(--my-spacing-10);
 }
 
 /* Tiles */
@@ -193,9 +191,9 @@ main li img {
 .tiles li {
     display: inline-block;
     border-bottom: none;
-    padding-left: 0px;
-    padding-right: 0px;
-    height: calc(var(--my-size-img-tiles) + 10px);
+    padding-left: var(--my-spacing-0);
+    padding-right: var(--my-spacing-0);
+    height: calc(var(--my-size-img-tiles) + var(--my-spacing-10));
 }
 
 .tiles li * {
@@ -209,7 +207,7 @@ main li img {
 }
 
 .tiles main {
-    padding-left: 10px;
+    padding-left: var(--my-spacing-10);
 }
 
 /* Fade in|out */
