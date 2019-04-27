@@ -8,11 +8,11 @@
     --my-color-lines: rgb(200, 200, 200);
     --my-color-main-background: rgb(255, 255, 255);
     --my-color-main-border-top: rgb(220, 220, 220);
-    --my-color-main-text: rgb(220, 220, 220);
+    --my-color-main-text: rgb(150, 150, 150);
     --my-height-footer: 50px;
     --my-height-header: 60px;
-    --my-height-list-item: 110px;
-    --my-size-img: 90px;
+    --my-height-list-item: 120px;
+    --my-size-img: 87px;
     --my-size-imgbutton: 40px;
     --my-size-imgbutton-img: 28px;
     --my-size-img-tiles: 100px;
@@ -171,8 +171,10 @@ footer .imgbutton {
 
 .option-button {
     background-image: url('./img/glyphicons/png/glyphicons-518-option-vertical.png');
-    background-size: auto;
-    margin-right: var(--my-spacing-0);
+}
+
+.play-button {
+    background-image: url('./img/glyphicons/png/glyphicons-174-play.png');
 }
 
 /* List view */
@@ -184,32 +186,80 @@ main ul {
     border-top: 20px solid var(--my-color-main-border-top);
 }
 
+.block {
+    display: block;
+    margin-top: calc((var(--my-height-list-item) - var(--my-size-img)) / 2);
+    padding: 0px;
+    margin: 0px;
+    margin-top: 10px;
+    line-height: 20px;
+    height: 20px;
+    font-size: 12pt;
+}
+
+.first-row {
+    padding-right: 16px;
+}
+
+.second-row {
+    padding-top: 16px;
+}
+
+.third-row {
+    padding-top: 11px;
+    padding-right: 14px;
+}
+
+div.tag {
+    display: inline-block;
+    margin-left: 4px;
+    margin-top: 1px;
+}
+
 main li {
     height: var(--my-height-list-item);
     line-height: var(--my-height-list-item);
     border-bottom: 1px solid var(--my-color-lines);
     padding-left: var(--my-spacing-15);
     padding-right: var(--my-spacing-10);
-    font-size: 20pt;
 }
 
-main li .imgbutton {
-    margin-top: calc((var(--my-height-list-item) - var(--my-size-imgbutton)) / 2);
-}
-
-main h2 {
+main li h2 {
     display: inline-block;
     font-weight: normal;
     margin: var(--my-spacing-0);
-    font-size: 20pt;
+    font-size: 15pt;
+}
+
+.play-button {
+    display: inline-block;
+    object-fit: cover;
+    margin-right: 20px;
+    padding: 0px;
+    margin: 0px;
+    width: 14px;
+    height: 20px;
+    background-size: 14px 13px;
+}
+
+.option-button {
+    display: inline-block;
+    object-fit: cover;
+    padding-right: var(--my-spacing-10);
+    padding: 0px;
+    margin: 0px;
+    margin-top: 4px;
+    width: 12px;
+    height: 25px;
+    background-size: auto 25px;
 }
 
 main li img {
     height: var(--my-size-img);
     width: var(--my-size-img);
     object-fit: cover;
-    margin-top: calc((var(--my-height-list-item) - var(--my-size-img)) / 2);
     margin-right: var(--my-spacing-10);
+    margin-top: 4px;
 }
 
 /* Tiles */
