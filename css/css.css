@@ -2,21 +2,24 @@
 
 :root {
     --my-color-background: limegreen;
-    --my-color-footer: rgb(255, 255, 255);
+    --my-color-footer-background: rgb(255, 255, 255);
     --my-color-footer-border-top: rgb(250, 132, 43);
-    --my-color-header: rgb(255, 255, 255);
-    --my-color-lines: rgb(205, 205, 205);
-    --my-color-main: rgb(255, 255, 255);
+    --my-color-header-background: rgb(255, 255, 255);
+    --my-color-lines: rgb(200, 200, 200);
+    --my-color-main-background: rgb(255, 255, 255);
+    --my-color-main-border-top: rgb(220, 220, 220);
+    --my-color-main-text: rgb(220, 220, 220);
     --my-height-footer: 50px;
     --my-height-header: 60px;
-    --my-height-list-item: 70px;
-    --my-size-img: 50px;
+    --my-height-list-item: 110px;
+    --my-size-img: 90px;
     --my-size-imgbutton: 40px;
     --my-size-imgbutton-img: 28px;
     --my-size-img-tiles: 100px;
     --my-spacing-0: 0px;
     --my-spacing-6: 6px;
     --my-spacing-10: 10px;
+    --my-spacing-15: 15px;
 }
 
 /* Init values */
@@ -52,17 +55,17 @@ html, body {
 /* Base structure */
 
 header {
-    background-color: var(--my-color-header);
+    background-color: var(--my-color-header-background);
     height: var(--my-height-header);
 }
 
 main {
-    background-color: var(--my-color-main);
+    background-color: var(--my-color-main-background);
     height: calc(100% - (var(--my-height-header) + var(--my-height-footer)));
 }
 
 footer {
-    background-color: var(--my-color-footer);
+    background-color: var(--my-color-footer-background);
     height: var(--my-height-footer);
     padding-left: var(--my-spacing-10);
     padding-right: var(--my-spacing-10);
@@ -79,7 +82,7 @@ main {
     overflow-y: auto;
 }
 
-/* Heading */
+/* Header */
 
 h1 {
     font-size: 20pt;
@@ -97,7 +100,17 @@ header {
     border-bottom: 5px solid var(--my-color-lines);
 }
 
-/* Footing */
+/* Main */
+
+h2 {
+    color: rgb(0, 0, 0);
+}
+
+main {
+    color: var(--my-color-main-text);
+}
+
+/* Footer */
 
 footer {
     border-top: 4px solid var(--my-color-footer-border-top);
@@ -156,8 +169,10 @@ footer .imgbutton {
     margin-right: var(--my-spacing-0);
 }
 
-.edit-button {
-    background-image: url('./img/glyphicons/png/glyphicons-31-pencil.png');
+.option-button {
+    background-image: url('./img/glyphicons/png/glyphicons-518-option-vertical.png');
+    background-size: auto;
+    margin-right: var(--my-spacing-0);
 }
 
 /* List view */
@@ -166,13 +181,14 @@ main ul {
     list-style: none;
     padding: var(--my-spacing-0);
     margin: var(--my-spacing-0);
+    border-top: 20px solid var(--my-color-main-border-top);
 }
 
 main li {
     height: var(--my-height-list-item);
     line-height: var(--my-height-list-item);
     border-bottom: 1px solid var(--my-color-lines);
-    padding-left: 15px;
+    padding-left: var(--my-spacing-15);
     padding-right: var(--my-spacing-10);
     font-size: 20pt;
 }
@@ -216,8 +232,8 @@ main li img {
     width: var(--my-size-img-tiles);
 }
 
-.tiles main {
-    padding-left: var(--my-spacing-10);
+.tiles ul {
+    padding-left: var(--my-spacing-15);
 }
 
 /* Fade in|out */
