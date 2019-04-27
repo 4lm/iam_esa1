@@ -2,20 +2,20 @@
 
 :root {
     --my-color-background: limegreen;
-    --my-color-header: rgb(255, 255, 255);
-    --my-color-main: rgb(255, 255, 255);
     --my-color-footer: rgb(255, 255, 255);
-    --my-height-header: 60px;
+    --my-color-header: rgb(255, 255, 255);
+    --my-color-lines: rgb(205, 205, 205);
+    --my-color-main: rgb(255, 255, 255);
     --my-height-footer: 50px;
+    --my-height-header: 60px;
+    --my-height-list-item: 70px;
+    --my-size-img: 50px;
+    --my-size-imgbutton: 40px;
+    --my-size-imgbutton-img: 28px;
+    --my-size-img-tiles: 100px;
     --my-spacing-0: 0px;
     --my-spacing-6: 6px;
     --my-spacing-10: 10px;
-    --my-size-imgbutton: 40px;
-    --my-size-imgbutton-img: 28px;
-    --my-height-list-item: 70px;
-    --my-color-lines: rgb(205, 205, 205);
-    --my-size-img: 50px;
-    --my-size-img-tiles: 100px;
 }
 
 html, body {
