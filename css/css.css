@@ -266,6 +266,10 @@ main li img {
 
 /* Tiles */
 
+.tiles ul {
+    padding-left: var(--my-spacing-15);
+}
+
 .tiles li {
     display: inline-block;
     border-bottom: none;
@@ -284,8 +288,9 @@ main li img {
     width: var(--my-size-img-tiles);
 }
 
-.tiles ul {
-    padding-left: var(--my-spacing-15);
+.tiles .list-button {
+    background-image: url('./img/glyphicons/png/glyphicons-115-list.png');
+    background-size: auto var(--my-size-imgbutton-img);
 }
 
 /* Fade in|out */
