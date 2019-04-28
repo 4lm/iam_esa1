@@ -136,6 +136,7 @@ footer {
     background-size: var(--my-size-imgbutton-img) auto;
     background-repeat: no-repeat;
     background-position: center;
+    outline: none;
 }
 
 header .imgbutton {
