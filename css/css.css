@@ -114,9 +114,7 @@ main {
 /* Footer */
 
 footer {
-    border-top: var(--my-height-footer-line) 
-                solid 
-                var(--my-color-footer-border-top);
+    border-top: var(--my-height-footer-line) solid var(--my-color-footer-border-top);
 }
 
 /* Left|right alignment, imgbuttons */
@@ -135,15 +133,11 @@ footer {
 }
 
 header .imgbutton {
-    margin-top: calc((var(--my-height-header) - 
-                var(--my-size-imgbutton) - 
-                var(--my-height-header-line)) / 2);
+    margin-top: calc((var(--my-height-header) - var(--my-size-imgbutton) - var(--my-height-header-line)) / 2);
 }
 
 footer .imgbutton {
-    margin-top: calc((var(--my-height-footer) - 
-                var(--my-size-imgbutton) - 
-                var(--my-height-footer-line)) / 2);
+    margin-top: calc((var(--my-height-footer) - var(--my-size-imgbutton) - var(--my-height-footer-line)) / 2);
 }
 
 .align-left {
@@ -229,6 +223,7 @@ main li {
     border-bottom: 1px solid var(--my-color-lines);
     padding-left: var(--my-spacing-15);
     padding-right: var(--my-spacing-10);
+    margin-top: 11px;
 }
 
 main li h2 {
