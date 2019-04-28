@@ -7,7 +7,7 @@
     --my-color-header-background: rgb(255, 255, 255);
     --my-color-lines: rgb(200, 200, 200);
     --my-color-main-background: rgb(255, 255, 255);
-    --my-color-main-border-top: rgb(220, 220, 220);
+    --my-color-main-buffer: rgb(220, 220, 220);
     --my-color-main-text: rgb(150, 150, 150);
     --my-height-footer: 50px;
     --my-height-footer-line: 5px;
@@ -111,6 +111,11 @@ main {
     color: var(--my-color-main-text);
 }
 
+.buffer {
+    height: 20px;
+    background-color: var(--my-color-main-buffer);
+}
+
 /* Footer */
 
 footer {
@@ -184,7 +189,6 @@ main ul {
     list-style: none;
     padding: var(--my-spacing-0);
     margin: var(--my-spacing-0);
-    border-top: 20px solid var(--my-color-main-border-top);
 }
 
 .block {
@@ -268,10 +272,15 @@ main li img {
 
 .tiles ul {
     margin: 0px auto;
-    width: 2050px;  /* Max value. Value changes via media queries */
+    /* Center UL */
+    width: 2050px;
+    /* Max value. Value changes via media queries */
     padding-left: 5px;
+    /* Extra padding to get 15px in total */
     padding-right: 5px;
-    font-size: 0px; 
+    /* Extra padding to get 15px in total */
+    font-size: 0px;
+    /* Remove whitespace, if needed in LI, redefine in LI */
 }
 
 .tiles li {
@@ -321,46 +330,55 @@ main {
         width: 350px;
     }
 }
+
 @media screen and (min-width: 520px) and (max-width: 689px) {
     .tiles ul {
         width: 520px;
     }
 }
+
 @media screen and (min-width: 690px) and (max-width: 859px) {
     .tiles ul {
         width: 690px;
     }
 }
+
 @media screen and (min-width: 860px) and (max-width: 1029px) {
     .tiles ul {
         width: 860px;
     }
 }
+
 @media screen and (min-width: 1030px) and (max-width: 1199px) {
     .tiles ul {
         width: 1030px;
     }
 }
+
 @media screen and (min-width: 1200px) and (max-width: 1369px) {
     .tiles ul {
         width: 1200px;
     }
 }
+
 @media screen and (min-width: 1370px) and (max-width: 1539px) {
     .tiles ul {
         width: 1370px;
     }
 }
+
 @media screen and (min-width: 1540px) and (max-width: 1709px) {
     .tiles ul {
         width: 1540px;
     }
 }
+
 @media screen and (min-width: 1710px) and (max-width: 1879px) {
     .tiles ul {
         width: 1710px;
     }
 }
+
 @media screen and (min-width: 1880px) and (max-width: 2049px) {
     .tiles ul {
         width: 1880px;
