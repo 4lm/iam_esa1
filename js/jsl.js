@@ -6,23 +6,31 @@ function initialiseView() {
     const header = document.getElementsByTagName("header")[0];
     const main = document.querySelector("main");
     const refresh = document.querySelector("footer .refresh-button");
+    const viewSwitch = header.querySelector(".list-button");
     let ul = main.getElementsByTagName("ul")[0];
     const add = header.querySelector(".add-button");
 
     // Switching views
-    header.onclick = () => {
-        document.body.classList.toggle("tiles");
+    viewSwitch.onclick = () => {
+        main.classList.add("faded");
+        main.addEventListener("transitionend", onTransitionEndViewSwitch);
     }
 
-    // Fade in|out
+    function onTransitionEndViewSwitch() {
+        document.body.classList.toggle("tiles");
+        main.classList.remove("faded");
+        main.removeEventListener("transitionend", onTransitionEndViewSwitch);
+    }
+
+    // Refresh, fade in|out
     refresh.onclick = () => {
         main.classList.add("faded");
-        main.addEventListener("transitionend", ontransitionend);
+        main.addEventListener("transitionend", onTransitionEndRefresh);
     }
 
-    function ontransitionend() {
+    function onTransitionEndRefresh() {
         main.classList.remove("faded");
-        main.removeEventListener("transitionend", ontransitionend);
+        main.removeEventListener("transitionend", onTransitionEndRefresh);
     }
 
     // List item selection
