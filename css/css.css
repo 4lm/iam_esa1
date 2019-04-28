@@ -10,7 +10,9 @@
     --my-color-main-border-top: rgb(220, 220, 220);
     --my-color-main-text: rgb(150, 150, 150);
     --my-height-footer: 50px;
+    --my-height-footer-line: 5px;
     --my-height-header: 60px;
+    --my-height-header-line: 5px;
     --my-height-list-item: 120px;
     --my-size-img: 87px;
     --my-size-imgbutton: 40px;
@@ -89,15 +91,14 @@ h1 {
     display: inline-block;
     margin: var(--my-spacing-0);
     padding-left: var(--my-spacing-6);
-    padding-right: var(--my-spacing-6);
     font-weight: normal;
-    line-height: var(--my-height-header);
+    line-height: calc(var(--my-height-header) - var(--my-height-header-line));
 }
 
 header {
     padding-right: var(--my-spacing-10);
     padding-left: var(--my-spacing-10);
-    border-bottom: 5px solid var(--my-color-lines);
+    border-bottom: var(--my-height-header-line) solid var(--my-color-lines);
 }
 
 /* Main */
@@ -113,7 +114,9 @@ main {
 /* Footer */
 
 footer {
-    border-top: 4px solid var(--my-color-footer-border-top);
+    border-top: var(--my-height-footer-line) 
+                solid 
+                var(--my-color-footer-border-top);
 }
 
 /* Left|right alignment, imgbuttons */
@@ -132,11 +135,15 @@ footer {
 }
 
 header .imgbutton {
-    margin-top: calc((var(--my-height-header) - var(--my-size-imgbutton)) / 2);
+    margin-top: calc((var(--my-height-header) - 
+                var(--my-size-imgbutton) - 
+                var(--my-height-header-line)) / 2);
 }
 
 footer .imgbutton {
-    margin-top: calc((var(--my-height-footer) - var(--my-size-imgbutton)) / 2);
+    margin-top: calc((var(--my-height-footer) - 
+                var(--my-size-imgbutton) - 
+                var(--my-height-footer-line)) / 2);
 }
 
 .align-left {
@@ -213,7 +220,7 @@ main ul {
 div.tag {
     display: inline-block;
     margin-left: 4px;
-    margin-top: 1px;
+    margin-top: 2px;
 }
 
 main li {
