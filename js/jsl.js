@@ -16,13 +16,13 @@ function initialiseView() {
 
     // Fade in|out
     refresh.onclick = () => {
-        main.classList.toggle("faded");
+        main.classList.add("faded");
         main.addEventListener("transitionend", ontransitionend);
     }
 
     function ontransitionend() {
+        main.classList.remove("faded");
         main.removeEventListener("transitionend", ontransitionend);
-        main.classList.toggle("faded");
     }
 
     // List item selection
