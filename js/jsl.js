@@ -44,7 +44,7 @@ function initialiseView() {
     }
 
     function getLiTitle(li) {
-        li.getElementsByTagName("h2")[0].textContent;
+        return li.getElementsByTagName("h2")[0].textContent;
     }
 
     // Add new elements
