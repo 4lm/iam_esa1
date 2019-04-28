@@ -17,7 +17,7 @@
     --my-size-img: 87px;
     --my-size-imgbutton: 40px;
     --my-size-imgbutton-img: 28px;
-    --my-size-img-tiles: 100px;
+    --my-size-img-tiles: 150px;
     --my-spacing-0: 0px;
     --my-spacing-6: 6px;
     --my-spacing-10: 10px;
@@ -267,15 +267,23 @@ main li img {
 /* Tiles */
 
 .tiles ul {
-    padding-left: var(--my-spacing-15);
+    margin: 0px auto;
+    width: 2050px;  /* Max value. Value changes via media queries */
+    padding-left: 5px;
+    padding-right: 5px;
+    font-size: 0px; 
 }
 
 .tiles li {
     display: inline-block;
     border-bottom: none;
-    padding-left: var(--my-spacing-0);
-    padding-right: var(--my-spacing-0);
-    height: calc(var(--my-size-img-tiles) + var(--my-spacing-10));
+    margin-top: 0px;
+    margin-bottom: var(--my-spacing-10);
+    margin-left: var(--my-spacing-10);
+    margin-right: var(--my-spacing-10);
+    padding: 0px;
+    height: var(--my-size-img-tiles);
+    width: var(--my-size-img-tiles);
 }
 
 .tiles li * {
@@ -284,6 +292,7 @@ main li img {
 
 .tiles li img {
     display: block;
+    margin: 0px;
     height: var(--my-size-img-tiles);
     width: var(--my-size-img-tiles);
 }
@@ -303,4 +312,57 @@ main.faded {
 main {
     opacity: 1;
     transition: opacity 1s;
+}
+
+/* Media Queries */
+
+@media screen and (max-width: 519px) {
+    .tiles ul {
+        width: 350px;
+    }
+}
+@media screen and (min-width: 520px) and (max-width: 689px) {
+    .tiles ul {
+        width: 520px;
+    }
+}
+@media screen and (min-width: 690px) and (max-width: 859px) {
+    .tiles ul {
+        width: 690px;
+    }
+}
+@media screen and (min-width: 860px) and (max-width: 1029px) {
+    .tiles ul {
+        width: 860px;
+    }
+}
+@media screen and (min-width: 1030px) and (max-width: 1199px) {
+    .tiles ul {
+        width: 1030px;
+    }
+}
+@media screen and (min-width: 1200px) and (max-width: 1369px) {
+    .tiles ul {
+        width: 1200px;
+    }
+}
+@media screen and (min-width: 1370px) and (max-width: 1539px) {
+    .tiles ul {
+        width: 1370px;
+    }
+}
+@media screen and (min-width: 1540px) and (max-width: 1709px) {
+    .tiles ul {
+        width: 1540px;
+    }
+}
+@media screen and (min-width: 1710px) and (max-width: 1879px) {
+    .tiles ul {
+        width: 1710px;
+    }
+}
+@media screen and (min-width: 1880px) and (max-width: 2049px) {
+    .tiles ul {
+        width: 1880px;
+    }
 }
