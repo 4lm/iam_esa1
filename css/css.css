@@ -296,8 +296,28 @@ main li img {
     width: var(--my-size-img-tiles);
 }
 
-.tiles li * {
+.tiles li .first-row {
     display: none;
+}
+
+.tiles li .second-row {
+    display: none;
+}
+
+.tiles li .play-button {
+    display: none;
+}
+
+.tiles li .tag {
+    display: none;
+}
+
+.tiles li .option-button {
+    position: relative;
+    margin: 0px;
+    bottom: 40px;
+    filter: invert(90%);
+    -webkit-filter: invert(90%);
 }
 
 .tiles li img {
