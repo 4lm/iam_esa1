@@ -114,6 +114,7 @@ main {
 .buffer {
     height: 20px;
     background-color: var(--my-color-main-buffer);
+    margin-bottom: 15px;
 }
 
 /* Footer */
