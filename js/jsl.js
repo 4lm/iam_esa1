@@ -36,7 +36,17 @@ function initialiseView() {
     // List item selection
     ul.onclick = (e) => {
         const li = getCurrentLi(e.target);
-        alert("Selected: " + getLiTitle(li) + " Click event on: " + e.target);
+        console.log(e);
+        if (e.target.classList.contains("option-button")) {
+            alert(
+                "Title: " + 
+                getLiTitle(li) + 
+                ", Image-URL: " + 
+                e.path[3].childNodes[1].currentSrc);
+        } else {
+            alert("Title: " + getLiTitle(li));
+        }
+
     }
 
     function getCurrentLi(el) {
@@ -44,7 +54,7 @@ function initialiseView() {
             return el;
         } else if (el.tagName === "UL") {
             alert("Reached list root, no LI found.");
-        } else if (el.parentNode){
+        } else if (el.parentNode) {
             return getCurrentLi(el.parentNode);
         } else {
             alert("Something went completly wrong.");
@@ -60,7 +70,7 @@ function initialiseView() {
         e.stopPropagation();
         addLiElementToList({
             title: "New Element " + Date.now(),
-            src:"https://placeimg.com/150/150"
+            src: "https://placeimg.com/150/150"
         });
     }
 
