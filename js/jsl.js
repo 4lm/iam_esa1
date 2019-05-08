@@ -44,11 +44,15 @@ function initialiseView() {
     ul.onclick = (e) => {
         const li = getCurrentLi(e.target);
         if (e.target.classList.contains("option-button")) {
-            alert(
-                "Title: " + 
+            const answer = confirm(
+                "Do you want to delete this item?\n\n" +
+                "- Title: " + 
                 getLiTitle(li) + 
-                ", Image-URL: " + 
+                "\n- Image-URL: " + 
                 e.path[3].childNodes[1].currentSrc);
+            if (answer === true) {
+                li.parentNode.removeChild(li);
+            }
         } else {
             alert("Title: " + getLiTitle(li));
         }
