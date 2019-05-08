@@ -10,7 +10,8 @@ function initialiseView() {
     const viewSwitch = header.querySelector(".list-button");
     let ul = main.getElementsByTagName("ul")[0];
     const add = header.querySelector(".add-button");
-    const litemplate = document.querySelector("main ul template");
+    const liTemplate = document.querySelector("main ul template");
+    const dataUrl = "data/listitems.json"; 
 
     // Switching views
     viewSwitch.onclick = () => {
@@ -31,6 +32,8 @@ function initialiseView() {
     }
 
     function onTransitionEndRefresh() {
+        ul.innerHTML = "";
+        addLiItemsFromServerToList(dataUrl);
         main.classList.remove("faded");
         main.removeEventListener("transitionend", onTransitionEndRefresh);
     }
@@ -93,7 +96,7 @@ function initialiseView() {
     }
 
     function addLiElementToList(obj) {
-        const li = document.importNode(litemplate.content, true);
+        const li = document.importNode(liTemplate.content, true);
         li.querySelector("h2").textContent = obj.title;
         li.querySelector(".owner").textContent = obj.owner;
         li.querySelector(".added").textContent = obj.added;
@@ -102,12 +105,16 @@ function initialiseView() {
         ul.appendChild(li);
     }
 
-    xhr("GET", "data/listitems.json", null, (xhrobj) => {
-        const items = JSON.parse(xhrobj.responseText);
-        items.forEach(e => {
-            addLiElementToList(e);
+    function addLiItemsFromServerToList(url) {
+        xhr("GET", url, null, (xhrobj) => {
+            const items = JSON.parse(xhrobj.responseText);
+            items.forEach(e => {
+                addLiElementToList(e);
+            });
         });
-    });
+    }
+
+    addLiItemsFromServerToList(dataUrl);
 }
 
 window.onload = initialiseView;
