@@ -367,13 +367,13 @@ main li h2 {
 
 .option-button {
     display: inline-block;
+    position: relative;
     object-fit: cover;
     padding-right: var(--my-spacing-10);
-    padding: 0px;
-    margin: 0px;
-    margin-top: 4px;
-    width: 12px;
-    height: 25px;
+    z-index: 1;
+    padding: 1em;
+    margin: -1em;
+    top: 10px;
     background-size: auto 25px;
 }
 
@@ -429,11 +429,10 @@ main li img {
 }
 
 .tiles li .option-button {
-    position: relative;
-    margin: 0px;
-    bottom: 40px;
     filter: invert(90%);
     -webkit-filter: invert(90%);
+    top: -30px;
+    left: 2px;
 }
 
 .tiles li img {
