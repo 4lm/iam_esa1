@@ -84,7 +84,6 @@ function initialiseView() {
     // Add new elements
     add.onclick = (e) => {
         e.stopPropagation();
-        // Get date elements DD, MM, YYYY
         const date = new Date().toLocaleDateString('de-DE', dateOptions);
         // Generate dimensions for image
         const x = parseInt(Math.random() * (max - min) + min);
