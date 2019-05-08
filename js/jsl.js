@@ -11,7 +11,9 @@ function initialiseView() {
     let ul = main.getElementsByTagName("ul")[0];
     const add = header.querySelector(".add-button");
     const liTemplate = document.querySelector("main ul template");
-    const dataUrl = "data/listitems.json"; 
+    const dataUrl = "data/listitems.json";
+    const max = 300;
+    const min = 150;
 
     // Switching views
     viewSwitch.onclick = () => {
@@ -82,8 +84,6 @@ function initialiseView() {
         mm = mm < 10 ? "0" + mm : mm;
         const yyyy = today.getFullYear();
         // Generate dimensions for image
-        const max = 300;
-        const min = 150;
         const x = parseInt(Math.random() * (max - min) + min);
         const y = parseInt(Math.random() * (max - min) + min);
         addLiElementToList({
