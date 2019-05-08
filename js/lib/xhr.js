@@ -10,7 +10,7 @@
  * onsucccess: callback in case of success
  * onerror: callback in case of error
  */
-function xhr(method, requestpath, obj, onsuccess, onerror) {
+export function xhr(method, requestpath, obj, onsuccess, onerror) {
 
 	return new Promise((resolve,reject) => {
         console.log("callWebapp()");
@@ -118,7 +118,7 @@ function xhr(method, requestpath, obj, onsuccess, onerror) {
 }
 
 // shows usage of the fetch api given the same parameters as passed above
-function dofetch(method, requestpath, obj) {
+export function dofetch(method, requestpath, obj) {
 	var fetchoptions = {
 		method
 	}

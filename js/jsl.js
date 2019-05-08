@@ -1,4 +1,5 @@
 "use strict";
+import { xhr } from "./lib/xhr.js";
 /**
  * Created by master on 01.03.16.
  */
