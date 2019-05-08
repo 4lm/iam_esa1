@@ -5,16 +5,20 @@
     --my-color-footer-border-top: rgb(250, 132, 43);
     --my-color-lines: rgb(200, 200, 200);
     --my-color-main-buffer: rgb(220, 220, 220);
+    --my-color-heading-text: rgb(0, 0, 0);
     --my-color-main-text: rgb(150, 150, 150);
+
     --my-height-footer: 50px;
     --my-height-footer-line: 5px;
     --my-height-header: 60px;
     --my-height-header-line: 5px;
     --my-height-list-item: 120px;
+
     --my-size-img: 87px;
+    --my-size-img-tiles: 150px;
     --my-size-imgbutton: 40px;
     --my-size-imgbutton-img: 28px;
-    --my-size-img-tiles: 150px;
+
     --my-spacing-0: 0px;
     --my-spacing-6: 6px;
     --my-spacing-10: 10px;
@@ -142,7 +146,7 @@ html, body {
     margin: var(--my-spacing-0);
     font-family: 'Nunito Sans', 'Avenir Medium', sans-serif;
     font-weight: 400;
-    color: rgb(0, 0, 0);
+    color: var(--my-color-heading-text);
     width: 100%;
     max-width: 100%;
     height: 100%;
@@ -213,7 +217,7 @@ header {
 /* Main */
 
 h2 {
-    color: rgb(0, 0, 0);
+    color: var(--my-color-heading-text);
 }
 
 main {
