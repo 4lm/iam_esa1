@@ -9,6 +9,7 @@ function initialiseView() {
     const viewSwitch = header.querySelector(".list-button");
     let ul = main.getElementsByTagName("ul")[0];
     const add = header.querySelector(".add-button");
+    const litemplate = document.querySelector("main ul template");
 
     // Switching views
     viewSwitch.onclick = () => {
@@ -36,7 +37,6 @@ function initialiseView() {
     // List item selection
     ul.onclick = (e) => {
         const li = getCurrentLi(e.target);
-        console.log(e);
         if (e.target.classList.contains("option-button")) {
             alert(
                 "Title: " + 
@@ -69,15 +69,16 @@ function initialiseView() {
     add.onclick = (e) => {
         e.stopPropagation();
         addLiElementToList({
-            title: "New Element " + Date.now(),
+            title: "M " + Date.now(),
             src: "https://placeimg.com/150/150"
         });
     }
 
     function addLiElementToList(obj) {
-        console.log("add new element for: " + JSON.stringify(obj));
-
-        ul.innerHTML = ul.innerHTML + "<li><img class=\"align-left\" src=\"" + obj.src + "\"><h2>" + obj.title + "</h2><button class=\"imgbutton align-right edit-button\"></button></li>\""
+        const li = document.importNode(litemplate.content, true);
+        li.querySelector("img").src = obj.src;
+        li.querySelector("h2").textContent = obj.title;
+        ul.appendChild(li);
     }
 }
 
