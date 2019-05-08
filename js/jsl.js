@@ -14,6 +14,11 @@ function initialiseView() {
     const dataUrl = "data/listitems.json";
     const max = 300;
     const min = 150;
+    const dateOptions = {
+        year: 'numeric',
+        month: '2-digit',
+        day: '2-digit'
+    };
 
     // Switching views
     viewSwitch.onclick = () => {
@@ -79,21 +84,14 @@ function initialiseView() {
     add.onclick = (e) => {
         e.stopPropagation();
         // Get date elements DD, MM, YYYY
-        const today = new Date();
-        let dd = today.getDay()
-        // Add leading zero if needed
-        dd = dd < 10 ? "0" + dd : dd;
-        let mm = today.getMonth();
-        // Add leading zero if needed
-        mm = mm < 10 ? "0" + mm : mm;
-        const yyyy = today.getFullYear();
+        const date = new Date().toLocaleDateString('de-DE', dateOptions);
         // Generate dimensions for image
         const x = parseInt(Math.random() * (max - min) + min);
         const y = parseInt(Math.random() * (max - min) + min);
         addLiElementToList({
             title: "M " + Date.now(),
             owner: "placeimg.com",
-            added: `${dd}.${mm}.${yyyy}`,
+            added: date,
             numOfTags: parseInt(Math.random() * 10),
             src: `https://placeimg.com/${x}/${y}`
         });
