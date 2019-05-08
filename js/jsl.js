@@ -108,8 +108,8 @@ function initialiseView() {
     function addLiItemsFromServerToList(url) {
         xhr("GET", url, null, (xhrobj) => {
             const items = JSON.parse(xhrobj.responseText);
-            items.forEach(e => {
-                addLiElementToList(e);
+            items.forEach(el => {
+                addLiElementToList(el);
             });
         });
     }
