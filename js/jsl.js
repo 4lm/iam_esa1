@@ -33,17 +33,10 @@ function initialiseView() {
         main.removeEventListener('transitionend', onTransitionEndViewSwitch);
     }
 
-    // Refresh, fade in|out
+    // Refresh
     refresh.onclick = () => {
-        main.classList.add('faded');
-        main.addEventListener('transitionend', onTransitionEndRefresh);
-    }
-
-    function onTransitionEndRefresh() {
         ul.innerHTML = '';
         addLiItemsFromServerToList(dataUrl, addLiElementToList);
-        main.classList.remove('faded');
-        main.removeEventListener('transitionend', onTransitionEndRefresh);
     }
 
     // List item selection
