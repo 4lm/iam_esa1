@@ -80,6 +80,13 @@ function initialiseView() {
         li.querySelector("h2").textContent = obj.title;
         ul.appendChild(li);
     }
+
+    xhr("GET", "data/listitems.json", null, (xhrobj) => {
+        const items = JSON.parse(xhrobj.responseText);
+        items.forEach(e => {
+            addLiElementToList(e);
+        });
+    });
 }
 
 window.onload = initialiseView;
