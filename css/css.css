@@ -7,18 +7,15 @@
     --my-color-main-buffer: rgb(220, 220, 220);
     --my-color-heading-text: rgb(0, 0, 0);
     --my-color-main-text: rgb(150, 150, 150);
-
     --my-height-footer: 50px;
     --my-height-footer-line: 5px;
     --my-height-header: 60px;
     --my-height-header-line: 5px;
     --my-height-list-item: 120px;
-
     --my-size-img: 87px;
     --my-size-img-tiles: 150px;
     --my-size-imgbutton: 40px;
     --my-size-imgbutton-img: 28px;
-
     --my-spacing-0: 0px;
     --my-spacing-6: 6px;
     --my-spacing-10: 10px;
@@ -386,16 +383,16 @@ main li img {
 /* Tiles */
 
 .tiles ul {
-    margin: 0px auto;
     /* Center UL */
-    width: 2050px;
+    margin: 0px auto;
     /* Max value. Value changes via media queries */
+    width: 2050px;
+    /* Extra padding to get 15px in total */
     padding-left: 5px;
     /* Extra padding to get 15px in total */
     padding-right: 5px;
-    /* Extra padding to get 15px in total */
-    font-size: 0px;
     /* Remove whitespace, if needed in LI, redefine in LI */
+    font-size: 0px;
 }
 
 .tiles li {
