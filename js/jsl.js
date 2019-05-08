@@ -1,5 +1,5 @@
 "use strict";
-import { xhr } from "./lib/xhr.js";
+import { addLiItemsFromServerToList } from "./jsr.js";
 /**
  * Created by master on 01.03.16.
  */
@@ -35,7 +35,7 @@ function initialiseView() {
 
     function onTransitionEndRefresh() {
         ul.innerHTML = "";
-        addLiItemsFromServerToList(dataUrl);
+        addLiItemsFromServerToList(dataUrl, addLiElementToList);
         main.classList.remove("faded");
         main.removeEventListener("transitionend", onTransitionEndRefresh);
     }
@@ -105,16 +105,7 @@ function initialiseView() {
         ul.appendChild(li);
     }
 
-    function addLiItemsFromServerToList(url) {
-        xhr("GET", url, null, (xhrobj) => {
-            const items = JSON.parse(xhrobj.responseText);
-            items.forEach(el => {
-                addLiElementToList(el);
-            });
-        });
-    }
-
-    addLiItemsFromServerToList(dataUrl);
+    addLiItemsFromServerToList(dataUrl, addLiElementToList);
 }
 
 window.onload = initialiseView;
