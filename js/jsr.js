@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 
 export function addLiItemsFromServerToList(url, callback) {
     fetch(url)
