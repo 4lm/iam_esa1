@@ -1,5 +1,5 @@
 {
-  "name": "css_jsl_jsr",
+  "name": "iam_esa1",
   "version": "1.0.0",
   "description": "",
   "main": "htm.html",
@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/4lm/org.dieschnittstelle.iam.css_jsl_jsr.git"
+    "url": "git+https://github.com/4lm/iam_esa1.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/4lm/org.dieschnittstelle.iam.css_jsl_jsr/issues"
+    "url": "https://github.com/4lm/iam_esa1/issues"
   },
-  "homepage": "https://github.com/4lm/org.dieschnittstelle.iam.css_jsl_jsr#readme",
+  "homepage": "https://github.com/4lm/iam_esa1#readme",
   "devDependencies": {
     "lite-server": "^2.4.0"
   }
