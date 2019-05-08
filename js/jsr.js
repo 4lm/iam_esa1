@@ -1,15 +1,10 @@
 "use strict";
 
-import { xhr } from "./lib/xhr.js";
-
-
 export function addLiItemsFromServerToList(url, callback) {
-    xhr("GET", url, null, (xhrobj) => {
-        const items = JSON.parse(xhrobj.responseText);
-        items.forEach(el => {
-            callback(el);
-        });
-    });
+    fetch(url)
+        .then(data => data.json())
+        .then(json => json.forEach(el => callback(el)))
+        .catch(err => console.log(err));
 }
 
 const LOREMS = [
