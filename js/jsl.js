@@ -69,16 +69,31 @@ function initialiseView() {
     // Add new elements
     add.onclick = (e) => {
         e.stopPropagation();
+        // Get date elements DD, MM, YYYY
+        const today = new Date();
+        let dd = today.getDay()
+        // Add leading zero if needed
+        dd = dd < 10 ? "0" + dd : dd;
+        let mm = today.getMonth();
+        // Add leading zero if needed
+        mm = mm < 10 ? "0" + mm : mm;
+        const yyyy = today.getFullYear();
         addLiElementToList({
             title: "M " + Date.now(),
+            owner: "lorempixel.com",
+            added: `${dd}.${mm}.${yyyy}`,
+            numOfTags: Math.floor(Math.random()*10) + 1,
             src: "https://placeimg.com/150/150"
         });
     }
 
     function addLiElementToList(obj) {
         const li = document.importNode(litemplate.content, true);
-        li.querySelector("img").src = obj.src;
         li.querySelector("h2").textContent = obj.title;
+        li.querySelector(".owner").textContent = obj.owner;
+        li.querySelector(".added").textContent = obj.added;
+        li.querySelector("img").src = obj.src;
+        li.querySelector(".tags").textContent = obj.numOfTags;
         ul.appendChild(li);
     }
 

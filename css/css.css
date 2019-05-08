@@ -332,7 +332,7 @@ main ul {
     padding-right: 14px;
 }
 
-div.tag {
+div.tags {
     display: inline-block;
     margin-left: 4px;
     margin-top: 0.5px;
@@ -424,7 +424,7 @@ main li img {
     display: none;
 }
 
-.tiles li .tag {
+.tiles li .tags {
     display: none;
 }
 
