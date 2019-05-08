@@ -1,8 +1,9 @@
 "use strict";
+
 import { addLiItemsFromServerToList } from "./jsr.js";
-/**
- * Created by master on 01.03.16.
- */
+import { giveMeOneLorem } from "./jsr.js";
+
+
 function initialiseView() {
     const header = document.getElementsByTagName("header")[0];
     const main = document.querySelector("main");
@@ -89,7 +90,7 @@ function initialiseView() {
         const x = parseInt(Math.random() * (max - min) + min);
         const y = parseInt(Math.random() * (max - min) + min);
         addLiElementToList({
-            title: "M " + Date.now(),
+            title: giveMeOneLorem(),
             owner: "placeimg.com",
             added: date,
             numOfTags: parseInt(Math.random() * 10),
