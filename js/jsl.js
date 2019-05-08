@@ -78,12 +78,17 @@ function initialiseView() {
         // Add leading zero if needed
         mm = mm < 10 ? "0" + mm : mm;
         const yyyy = today.getFullYear();
+        // Generate dimensions for image
+        const max = 300;
+        const min = 150;
+        const x = parseInt(Math.random() * (max - min) + min);
+        const y = parseInt(Math.random() * (max - min) + min);
         addLiElementToList({
             title: "M " + Date.now(),
-            owner: "lorempixel.com",
+            owner: "placeimg.com",
             added: `${dd}.${mm}.${yyyy}`,
-            numOfTags: Math.floor(Math.random()*10) + 1,
-            src: "https://placeimg.com/150/150"
+            numOfTags: parseInt(Math.random() * 10),
+            src: `https://placeimg.com/${x}/${y}`
         });
     }
 
