@@ -144,6 +144,7 @@ html, body {
     background-color: var(--my-color-background);
     margin: var(--my-spacing-0);
     font-family: 'Nunito Sans', 'Avenir Medium', sans-serif;
+    font-weight: 400;
     color: rgb(0, 0, 0);
     width: 100%;
     max-width: 100%;
@@ -202,10 +203,10 @@ main {
 
 h1 {
     font-size: 20pt;
+    font-weight: 600;
     display: inline-block;
     margin: var(--my-spacing-0);
     padding-left: var(--my-spacing-6);
-    font-weight: normal;
     line-height: calc(var(--my-height-header) - var(--my-height-header-line));
 }
 
