@@ -1,12 +1,9 @@
 /* Variable declarations */
 
 :root {
-    --my-color-background: limegreen;
-    --my-color-footer-background: rgb(255, 255, 255);
+    --my-color-background: white;
     --my-color-footer-border-top: rgb(250, 132, 43);
-    --my-color-header-background: rgb(255, 255, 255);
     --my-color-lines: rgb(200, 200, 200);
-    --my-color-main-background: rgb(255, 255, 255);
     --my-color-main-buffer: rgb(220, 220, 220);
     --my-color-main-text: rgb(150, 150, 150);
     --my-height-footer: 50px;
@@ -172,17 +169,14 @@ html, body {
 /* Base structure */
 
 header {
-    background-color: var(--my-color-header-background);
     height: var(--my-height-header);
 }
 
 main {
-    background-color: var(--my-color-main-background);
     height: calc(100% - (var(--my-height-header) + var(--my-height-footer)));
 }
 
 footer {
-    background-color: var(--my-color-footer-background);
     height: var(--my-height-footer);
     padding-left: var(--my-spacing-10);
     padding-right: var(--my-spacing-10);
